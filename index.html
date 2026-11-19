@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Little Bear's Bedtime Stories – Stories &amp; Coloring Book for Kids</title>
+<meta name="description" content="Gentle bedtime stories and cozy coloring pages starring Bo the little bear and his glowing friend Nova. A calming addition to every bedtime routine.">
+<meta property="og:title" content="The Little Bear's Bedtime Stories">
+<meta property="og:description" content="Stories and coloring pages to calm busy minds and inspire sweet dreams.">
+<meta property="og:image" content="img/cover-front.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#14173a; --deep:#1e2158; --moon:#fff3c4; --honey:#ffcf5c;
+  --coral:#ff8fa3; --mint:#7fe3b8; --sky:#7cc9ff; --lilac:#b79cff; --cream:#fff8e6;
+  --ink:#232550;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:1.125rem;line-height:1.6;color:var(--cream);background:var(--night);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--honey);outline-offset:4px;border-radius:12px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.1;font-weight:700}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1rem}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--display);font-weight:600;font-size:1.25rem;text-decoration:none;
+  padding:.9rem 2rem;border-radius:999px;background:var(--honey);color:var(--ink);
+  box-shadow:0 6px 0 #d9a227,0 14px 30px rgba(255,207,92,.35);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #d9a227,0 10px 24px rgba(255,207,92,.35)}
+.btn:active{transform:translateY(6px);box-shadow:0 0 0 #d9a227}
+.btn.ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 3px var(--lilac)}
+.btn.ghost:hover{background:rgba(183,156,255,.18);transform:none}
+
+/* header */
+header{padding:1.25rem 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:var(--display);font-weight:600;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.brand i{width:14px;height:14px;border-radius:50%;background:var(--honey);box-shadow:0 0 14px 4px rgba(255,207,92,.7)}
+header .btn{font-size:1rem;padding:.55rem 1.3rem;box-shadow:0 4px 0 #d9a227}
+
+/* hero */
+.hero{position:relative;padding:2rem 0 6rem;background:
+  radial-gradient(60rem 30rem at 80% 20%,rgba(183,156,255,.28),transparent 60%),
+  radial-gradient(40rem 25rem at 10% 90%,rgba(124,201,255,.14),transparent 60%),var(--night)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);color:var(--moon);text-shadow:0 0 30px rgba(255,207,92,.35)}
+.hero p.lead{font-size:1.3rem;margin:1.25rem 0 2rem;max-width:34ch;color:#ece6ff}
+.ctas{display:flex;flex-wrap:wrap;gap:1rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;list-style:none;padding:0}
+.badges li{padding:.35rem .95rem;border-radius:999px;font-weight:800;font-size:.95rem;color:var(--ink)}
+.badges li:nth-child(1){background:var(--mint)}
+.badges li:nth-child(2){background:var(--sky)}
+.badges li:nth-child(3){background:var(--coral)}
+.badges li:nth-child(4){background:var(--lilac)}
+.book{position:relative;justify-self:center;width:min(380px,80%)}
+.book img{border-radius:10px 18px 18px 10px;transform:rotate(3deg);
+  box-shadow:-10px 0 0 #0d0f2b,0 30px 60px rgba(0,0,0,.55),0 0 80px rgba(255,207,92,.25);
+  animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:rotate(1deg) translateY(-12px)}}
+
+/* fireflies: the one decorative moment */
+.fly{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--honey);
+  box-shadow:0 0 12px 5px rgba(255,207,92,.8);opacity:0;animation:glow 5s ease-in-out infinite}
+.fly:nth-child(1){left:6%;top:30%;animation-delay:0s}
+.fly:nth-child(2){left:42%;top:12%;animation-delay:1.3s}
+.fly:nth-child(3){left:55%;top:78%;animation-delay:2.4s}
+.fly:nth-child(4){left:92%;top:55%;animation-delay:3.2s}
+.fly:nth-child(5){left:20%;top:85%;animation-delay:.8s}
+@keyframes glow{0%,100%{opacity:0;transform:translate(0,0)}40%,60%{opacity:1;transform:translate(14px,-18px)}}
+
+/* wave dividers */
+.wave{display:block;width:100%;height:60px;margin-top:-59px;position:relative}
+
+/* inside */
+.inside{background:var(--cream);color:var(--ink);padding:4.5rem 0 5rem}
+.inside h2{text-align:center}
+.inside .sub{text-align:center;max-width:46ch;margin:0 auto 3rem;font-size:1.2rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{padding:2rem 1.5rem;border-radius:32px 32px 32px 8px}
+.card:nth-child(1){background:#d9f7e9;transform:rotate(-1.5deg)}
+.card:nth-child(2){background:#ffe3e8;border-radius:32px 8px 32px 32px;transform:rotate(1deg)}
+.card:nth-child(3){background:#dcecff;border-radius:8px 32px 32px 32px;transform:rotate(-1deg)}
+.card .ico{font-size:2.6rem;line-height:1;margin-bottom:.8rem}
+.card h3{font-size:1.5rem;margin-bottom:.4rem}
+
+/* preview */
+.preview{background:var(--deep);padding:5rem 0}
+.preview h2{text-align:center;color:var(--moon)}
+.preview .sub{text-align:center;max-width:46ch;margin:0 auto 3rem}
+.pages{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.pages figure{background:#fff;padding:.6rem;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.4);transition:transform .25s}
+.pages figure:nth-child(odd){transform:rotate(-2deg)}
+.pages figure:nth-child(even){transform:rotate(2deg) translateY(14px)}
+.pages figure:hover{transform:rotate(0) scale(1.05)}
+.pages img{border-radius:8px;width:100%;height:auto}
+.note{text-align:center;margin-top:3rem;color:#cfc8f5;font-size:1rem}
+
+/* story */
+.story{background:var(--night);padding:5rem 0}
+.story .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:3.5rem;align-items:center}
+.story img{border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 60px rgba(183,156,255,.3);transform:rotate(-2deg)}
+.story h2{color:var(--moon)}
+.story p+p{margin-top:1rem}
+.story ul{list-style:none;padding:0;margin-top:1.5rem;display:grid;gap:.7rem}
+.story li{display:flex;gap:.8rem;align-items:center;font-weight:800}
+.story li::before{content:"";flex:none;width:14px;height:14px;border-radius:50%;background:var(--honey);box-shadow:0 0 12px 3px rgba(255,207,92,.6)}
+
+/* final cta */
+.final{background:linear-gradient(180deg,var(--night),#2a1f5c);text-align:center;padding:5rem 0 6rem}
+.final h2{color:var(--moon);max-width:18ch;margin-inline:auto}
+.final p{max-width:40ch;margin:0 auto 2rem}
+footer{background:#0d0f2b;padding:1.5rem 0;text-align:center;font-size:.95rem;color:#a9a6d6}
+
+@media (max-width:860px){
+  .hero .wrap,.story .wrap{grid-template-columns:1fr}
+  .hero{padding-bottom:4.5rem}
+  .book{order:-1;width:min(260px,70%)}
+  .cards{grid-template-columns:1fr}
+  .pages{grid-template-columns:repeat(2,1fr)}
+  .story img{max-width:320px;margin-inline:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .fly{opacity:.8}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>The Little Bear's Bedtime Stories</a>
+    
+    <a class="btn" href="https://a.co/d/0dYVF4HF" target="_blank" rel="noopener">Buy now</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <span class="fly"></span><span class="fly"></span><span class="fly"></span><span class="fly"></span><span class="fly"></span>
+    <div class="wrap">
+      <div>
+        <h1>Sweet dreams start with a story</h1>
+        <p class="lead">Join Bo the little bear and his glowing friend Nova for gentle bedtime stories and cozy pages to color.</p>
+        <div class="ctas">
+          
+          <a class="btn" href="https://a.co/d/0dYVF4HF" target="_blank" rel="noopener">Buy now on Amazon</a>
+          <a class="btn ghost" href="#preview">Peek inside</a>
+        </div>
+        <ul class="badges">
+          <li>Stories to read together</li>
+          <li>Cozy scenes to color</li>
+          <li>Night-time activities</li>
+          <li>Bold, clear lines</li>
+        </ul>
+      </div>
+      <div class="book">
+        <img src="img/cover-front.jpg" alt="Cover of The Little Bear's Bedtime Stories, showing Bo the bear holding a glowing firefly under the moon" width="850" height="1100">
+      </div>
+    </div>
+  </section>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30C240 0 480 0 720 25s480 30 720 5v30z" fill="#fff8e6"/></svg>
+
+  <section class="inside" id="inside">
+    <div class="wrap">
+      <h2>A calm little ritual for every night</h2>
+      <p class="sub">Short stories and big, friendly drawings help busy minds slow down and get ready for sleep.</p>
+      <div class="cards">
+        <div class="card"><div class="ico" aria-hidden="true">📖</div><h3>Lovely stories</h3><p>Read together at the end of the day. Every story is short, soft and just right for bedtime.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🖍️</div><h3>Cozy scenes to color</h3><p>Thick, easy lines on every page make coloring fun for small hands.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">🌙</div><h3>Magical night-time fun</h3><p>Quiet activities that turn winding down into something to look forward to.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview" id="preview">
+    <div class="wrap">
+      <h2>Take a peek inside</h2>
+      <p class="sub">Each page pairs a short story with a drawing ready to be colored.</p>
+      <div class="pages">
+        <figure><img src="img/preview-1.jpg" alt="Story page: Bo the bear lives in a cozy cabin at the edge of the forest" loading="lazy" width="680" height="880"></figure>
+        <figure><img src="img/preview-2.jpg" alt="Story page: Bo hugs his teddy at the window as the moon comes out" loading="lazy" width="680" height="880"></figure>
+        <figure><img src="img/preview-3.jpg" alt="Story page: a tiny firefly named Nova tumbles in through the window" loading="lazy" width="680" height="880"></figure>
+        <figure><img src="img/preview-4.jpg" alt="Story page: Bo cups Nova gently in his paws" loading="lazy" width="680" height="880"></figure>
+      </div>
+      <p class="note">Printed in 8.5 × 11 in format with plenty of room to color.</p>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <img src="img/cover-back.jpg" alt="Back cover: Share the magic of bedtime" loading="lazy" width="850" height="1100">
+      <div>
+        <h2>Share the magic of bedtime</h2>
+        <p>A heartwarming adventure awaits. Bo and his glowing friends explore gentle stories and creative coloring pages made for calming busy minds and inspiring sweet dreams.</p>
+        <p>It's the perfect addition to every bedtime routine.</p>
+        <ul>
+          <li>Lovely stories to read together</li>
+          <li>Beautiful, cozy scenes to color</li>
+          <li>Magical night-time activities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Ready for a cozy bedtime?</h2>
+      <p>Bring Bo, Nova and a box of crayons home tonight.</p>
+      
+      <a class="btn" href="https://a.co/d/0dYVF4HF" target="_blank" rel="noopener">Buy now on Amazon</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 KND. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
